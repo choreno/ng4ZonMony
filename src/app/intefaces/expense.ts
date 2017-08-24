@@ -5,7 +5,6 @@ export interface IExpense {
     subFolder: ISubFolder[];
     createdDTTM: Date;
     updatedDTTM: Date;
-
 }
 
 export interface ISubFolder {
@@ -15,13 +14,7 @@ export interface ISubFolder {
     url: string;
     isPayByCredit: boolean;
     payments: IPayment[];
-    activeDTTM: IActiveDTTM[];
-}
-
-export interface IActiveDTTM {
-
-    activatedDTTM: Date;
-    inactivatedDTTM: Date;
+    effectiveDTTM: IEffectiveDTTM[];
 }
 
 export interface IPayment {
@@ -30,4 +23,10 @@ export interface IPayment {
     paymentDTTM: Date;
     createdDTTM: Date;
     updatedDTTM: Date;
+}
+
+export interface IEffectiveDTTM {
+
+    issuedDTTM: Date;
+    expiredDTTM: Date;
 }
