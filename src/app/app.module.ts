@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoogleChartsDirective } from './shared/charts/google-charts.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GoogleChartsDirective
   ],
   imports: [
     BrowserModule,
