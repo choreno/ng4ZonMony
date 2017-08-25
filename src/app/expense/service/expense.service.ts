@@ -22,7 +22,8 @@ export class ExpenseService {
   getAllExpenses(): Observable<IExpense[]> {
 
     return this._http.get('api/expenses').map(x =><IExpense[]> x.json())
-    .do(data => console.log('All:' + JSON.stringify(data)))
+    // .do(data => console.log('All:' + JSON.stringify(data)))
+    ;
   }
 
 
