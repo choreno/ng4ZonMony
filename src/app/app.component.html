@@ -4,9 +4,7 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
-                        Start Bootstrap
-                    </a>
+                <a href="#">Start Bootstrap</a>
             </li>
             <li>
                 <a href="#">Dashboard</a>
@@ -31,47 +29,56 @@
             </li>
         </ul>
     </div>
-    <!-- /#sidebar-wrapper -->
 
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <h1>Simple Sidebar</h1>
-            <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will
-                appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear.
-                On small screens, the page content will be pushed off canvas.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" (click)='hasSidebar = !hasSidebar'>Toggle Menu</a>
-        </div>
+    
+        
 
-        <router-outlet></router-outlet>
+        <div id="page-content-wrapper">
+            
+            <i class="fa fa-bars fa-lg" aria-hidden="true" (click)='hasSidebar = !hasSidebar'></i>
 
+            <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" (click)='hasSidebar = !hasSidebar'>Menu</a> -->
 
-        <h2> Gaugh Chart</h2>
+             <!-- <div class="container-fluid">
+                <h1>RL Carriers</h1>
+                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and
+                    will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear.
+                    On small screens, the page content will be pushed off canvas.</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                
+            </div>  -->
+
+            <!-- <h2> Gaugh Chart</h2>
         <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
 
         <h2> Area Chart</h2>
-        <div id="area_chart" [chartData]="area_ChartData" [chartOptions]="area_ChartOptions" chartType="AreaChart" GoogleChart></div>
+        <div id="area_chart" [chartData]="area_ChartData" [chartOptions]="area_ChartOptions" chartType="AreaChart" GoogleChart></div> -->
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+    
+
+</div>
 
 
-    </div>
-    <!-- /#page-content-wrapper -->
 
 
 
 
+<!-- /#page-content-wrapper -->
 
 
+<!--The content below is only a placeholder and can be replaced.-->
 
-
-    <!--The content below is only a placeholder and can be replaced.-->
-
-    <!-- <button class="btn btn-primary">Button with Bootstrap</button>
+<!-- <button class="btn btn-primary">Button with Bootstrap</button>
     <i class="fa fa-camera-retro fa-2x"></i> fa-lg
  -->
 
-    <!-- 
+<!-- 
     <h2> Gaugh Chart</h2>
     <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
 
@@ -100,5 +107,3 @@
     <div id="map_chart" [chartData]="map_ChartData" [chartOptions]="map_ChartOptions" chartType="GeoChart" GoogleChart></div>
     <h2> Organization Chart</h2>
     <div id="org_chart" [chartData]="org_ChartData" [chartOptions]="org_ChartOptions" chartType="OrgChart" GoogleChart></div> -->
-
-</div>

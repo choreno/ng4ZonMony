@@ -2,19 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import {ExpenseModule} from './expense/expense.module';
+
 import { AppComponent } from './app.component';
-import { GoogleChartsDirective } from './shared/charts/google-charts.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleChartsDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ExpenseModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

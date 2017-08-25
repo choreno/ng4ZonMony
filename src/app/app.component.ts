@@ -10,7 +10,52 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'app';
-  hasSidebar : boolean = true; 
+  hasSidebar: boolean = false;
+
+  // public gauge_ChartData = [
+  //   ['Label', 'Value'],
+  //   ['Systolic', 120],
+  //   ['Diastolic', 80]];
+
+  // public gauge_ChartOptions = {
+  //   width: 400, height: 120,
+  //   redFrom: 90, redTo: 100,
+  //   yellowFrom: 75, yellowTo: 90,
+  //   minorTicks: 5
+  // };
+
+  // public area_ChartData = [
+  //   ['Year', 'Sales', 'Expenses'],
+  //   ['2013', 1000, 400],
+  //   ['2014', 1170, 460],
+  //   ['2015', 660, 1120],
+  //   ['2016', 1030, 540]
+  // ];
+
+  // public area_ChartOptions = {
+  //   title: 'Company Performance',
+  //   hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
+  //   vAxis: { minValue: 0 }
+  // };
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // public line_ChartData = [
@@ -67,7 +112,7 @@ export class AppComponent {
   //   ['Chicago, IL', 2695000, 2896000],
   //   ['Houston, TX', 2099000, 1953000],
   //   ['Philadelphia, PA', 1526000, 1517000]];
-  
+
   //   public map_ChartData = [
   //   ['Country', 'Popularity'],
   //   ['Germany', 200],
@@ -161,31 +206,31 @@ export class AppComponent {
   //   height: 500
   // };
 
-  public gauge_ChartData = [
-    ['Label', 'Value'],
-    ['Systolic', 120],
-    ['Diastolic', 80]];
-  
-    public gauge_ChartOptions = {
-    width: 400, height: 120,
-    redFrom: 90, redTo: 100,
-    yellowFrom: 75, yellowTo: 90,
-    minorTicks: 5
-  };
-  
-  public area_ChartData = [
-    ['Year', 'Sales', 'Expenses'],
-    ['2013', 1000, 400],
-    ['2014', 1170, 460],
-    ['2015', 660, 1120],
-    ['2016', 1030, 540]
-  ];
+  // public gauge_ChartData = [
+  //   ['Label', 'Value'],
+  //   ['Systolic', 120],
+  //   ['Diastolic', 80]];
 
-  public area_ChartOptions = {
-    title: 'Company Performance',
-    hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
-    vAxis: { minValue: 0 }
-  };
+  //   public gauge_ChartOptions = {
+  //   width: 400, height: 120,
+  //   redFrom: 90, redTo: 100,
+  //   yellowFrom: 75, yellowTo: 90,
+  //   minorTicks: 5
+  // };
+
+  // public area_ChartData = [
+  //   ['Year', 'Sales', 'Expenses'],
+  //   ['2013', 1000, 400],
+  //   ['2014', 1170, 460],
+  //   ['2015', 660, 1120],
+  //   ['2016', 1030, 540]
+  // ];
+
+  // public area_ChartOptions = {
+  //   title: 'Company Performance',
+  //   hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
+  //   vAxis: { minValue: 0 }
+  // };
 
   // public map_ChartOptions = {};
 
@@ -194,4 +239,4 @@ export class AppComponent {
   // };
 
 
-}
+
