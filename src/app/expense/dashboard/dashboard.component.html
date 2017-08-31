@@ -1,3 +1,70 @@
+
+<div class="row mt-5">
+
+  <div class="col-xl">
+
+    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">UnP
+      </div>
+      <div class="card-body">
+        <div style="font-size:60px" class="pull-right">
+          3
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-xl-6 ">
+
+    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Comparison
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
+          </div>
+          <div class="col-md-5">
+            <div id="pie_chartfx" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+          </div>
+          <div class="col-md-5">
+            <div id="line_chartx" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-xl ">
+
+        <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Total
+      </div>
+      <div class="card-body">
+        <div>
+          Last Month: 3000.00
+        </div>
+        <div>
+          Current Month: 1000.00
+        </div>
+        <div>
+          Grand Totals: 503,230.00
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  
+</div>
+
+
 <div class="row mt-5">
   <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
     <div class="card-header">Housing
@@ -11,11 +78,11 @@
           <!-- Card 1 -->
           <div class="col-lg-4 mt-3">
             <div class="card text-white bg-dark border border-success">
-              <div class="card-header">
+              <div class="card-header" style="font-weight:bold;font-size:20px">
                 HOA
               </div>
               <div class="card-body">
-                <div class="card-text" style="font-size:20px">Homeowener's Association, XXXXX</div>
+                <div class="card-text">Homeowener's Association, XXXXX</div>
                 <br/>
                 <form class="form-horizontal">
                   <div class="form-group">
@@ -23,10 +90,11 @@
                       <label class="control-label">Due:&nbsp;</label>
                       <label class="control-label">30th</label>
                     </div>
-                    <label class="control-label">Payments: &nbsp;<span><i class="fa fa-credit-card fa-2x" aria-hidden="true"></i></span></label>
+                    <label class="control-label">Payments: </label>
 
                     <ul>
-                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$1500.09</span> @2/5/2017
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$1500.09</span> @2/5/2017 &nbsp;&nbsp;
+                        <span><i class="fa fa-credit-card" aria-hidden="true"></i></span>
                         <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
                       </li>
                       <li> Current Balance:
@@ -77,7 +145,8 @@
                     <label class="control-label">Payments: </label>
 
                     <ul>
-                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017 &nbsp;
+                        <span><i class="fa fa-money fa-2x" aria-hidden="true"></i></span>
                         <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
                       </li>
                       <li> Current Balance:
@@ -118,7 +187,7 @@
     <div class="card-footer">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-content-around">
-          
+
           <div class="col-lg">
             <div class="card text-white bg-dark border border-info">
               <div class="card-header">Line Chart</div>
@@ -278,7 +347,7 @@
     <div class="card-footer">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-content-around">
-          
+
           <div class="col-lg">
             <div class="card text-white bg-dark border border-info">
               <div class="card-header">Line Chart</div>
@@ -429,7 +498,7 @@
             </div>
           </div>
 
-                    <!-- Card 3 -->
+          <!-- Card 3 -->
           <div class="col-lg-4 mt-3">
             <div class="card text-white bg-dark border border-danger">
               <div class="card-header">
@@ -479,8 +548,8 @@
             </div>
           </div>
 
-          
-                    <!-- Card 4 -->
+
+          <!-- Card 4 -->
           <div class="col-lg-4 mt-3">
             <div class="card text-white bg-dark border border-danger">
               <div class="card-header">
@@ -539,7 +608,7 @@
     <div class="card-footer">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-content-around">
-          
+
           <div class="col-lg">
             <div class="card text-white bg-dark border border-info">
               <div class="card-header">Line Chart</div>
@@ -575,5 +644,3 @@
 
 
 </div>
-
-

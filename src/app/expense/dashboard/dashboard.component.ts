@@ -36,6 +36,22 @@ export class DashboardComponent implements OnInit {
 
 
 
+  public gauge_ChartData = [
+    ['Label', 'Value'],
+    ['$$$', 120],
+    // ['Diastolic', 80]
+  ];
+
+  public gauge_ChartOptions = {
+    
+    width: 100, height: 90,
+    redFrom: 90, redTo: 100,
+    yellowFrom: 75, yellowTo: 90,
+    minorTicks: 2
+  };
+
+
+
 
 
 
@@ -49,6 +65,7 @@ export class DashboardComponent implements OnInit {
   public line_ChartOptions = {
     title: 'Company Performance',
     curveType: 'function',
+    height: 90
     // legend: {
     //   position: 'bottom',
     //   textStyle:{
@@ -113,7 +130,7 @@ export class DashboardComponent implements OnInit {
   public pie_ChartOptions = {
     title: 'My Daily Activities',
     // width: 200,
-    // height: 200
+     height: 90
   };
 
 

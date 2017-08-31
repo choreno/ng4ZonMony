@@ -1,8 +1,10 @@
+import { PaymentType } from '../enum/payment-type.enum';
+
 export interface IExpense {
 
     id: number;
     folderName: string;
-    subFolder: ISubFolder[];
+    subFolders: ISubFolder[];
     createdDTTM: Date;
     updatedDTTM: Date;
 }
@@ -12,9 +14,9 @@ export interface ISubFolder {
     note: string;
     dueDate: number;
     url: string;
-    isPayByCredit: boolean;
     payments: IPayment[];
-    effectiveDTTM: IEffectiveDTTM[];
+    paymentTypes: IPaymentType[]; 
+    effectiveDTTMs: IEffectiveDTTM[];
 }
 
 export interface IPayment {
@@ -28,5 +30,12 @@ export interface IPayment {
 export interface IEffectiveDTTM {
 
     issuedDTTM: Date;
-    expiredDTTM: Date;
+    expiredDTTM?: Date;
+}
+
+export interface IPaymentType {
+    type: PaymentType ;
+    startDTTM: Date;
+    endDTTM?: Date; 
+
 }

@@ -1,8 +1,9 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { IExpense } from '../inteface/expense';
+import { PaymentType } from '../enum/payment-type.enum';
 
 export class ExpenseDb implements InMemoryDbService {
-    
+
     createDb() {
 
         let expenses: IExpense[] = [
@@ -10,13 +11,12 @@ export class ExpenseDb implements InMemoryDbService {
             {
                 id: 1,
                 folderName: 'Housing',
-                subFolder: [
+                subFolders: [
                     {
                         name: 'Mortgage',
                         note: 'Garison Way #xx, Fixed x.x%, 30 yrs',
                         dueDate: 30,
                         url: 'http://wellsfargo.com',
-                        isPayByCredit: false,
                         payments: [
                             {
                                 amount: 1600.39,
@@ -33,7 +33,14 @@ export class ExpenseDb implements InMemoryDbService {
                                 updatedDTTM: new Date('2/1//2016'),
                             },
                         ],
-                        effectiveDTTM: [
+                        paymentTypes: [
+                            {
+                                type: PaymentType.online,
+                                startDTTM: new Date('1/1/2016'),
+                                endDTTM: null
+                            },
+                        ],
+                        effectiveDTTMs: [
                             {
                                 issuedDTTM: new Date('5/3/2011'),
                                 expiredDTTM: null
@@ -45,7 +52,6 @@ export class ExpenseDb implements InMemoryDbService {
                         note: 'Home Owner Association',
                         dueDate: 30,
                         url: null,
-                        isPayByCredit: false,
                         payments: [
                             {
                                 amount: 81,
@@ -62,7 +68,15 @@ export class ExpenseDb implements InMemoryDbService {
                                 updatedDTTM: new Date('2/1//2016'),
                             },
                         ],
-                        effectiveDTTM: [
+                        paymentTypes: [
+                            {
+                                type: PaymentType.check,
+                                startDTTM: new Date('1/1/2016'),
+                                endDTTM: null
+                            },
+                        ],
+
+                        effectiveDTTMs: [
                             {
                                 issuedDTTM: new Date('5/3/2011'),
                                 expiredDTTM: null
@@ -77,13 +91,12 @@ export class ExpenseDb implements InMemoryDbService {
             {
                 id: 2,
                 folderName: 'Utility',
-                subFolder: [
+                subFolders: [
                     {
                         name: 'GRU',
                         note: 'The eletric power provider in Gainesville',
                         dueDate: 30,
                         url: 'http://www.gru.com',
-                        isPayByCredit: true,
                         payments: [
                             {
                                 amount: 194.01,
@@ -94,7 +107,15 @@ export class ExpenseDb implements InMemoryDbService {
                             }
 
                         ],
-                        effectiveDTTM: [
+                        paymentTypes: [
+                            {
+                                type: PaymentType.creditcard,
+                                startDTTM: new Date('1/1/2016'),
+                                endDTTM: null
+                            },
+                        ],
+
+                        effectiveDTTMs: [
                             {
                                 issuedDTTM: new Date('5/3/2011'),
                                 expiredDTTM: null
@@ -108,13 +129,12 @@ export class ExpenseDb implements InMemoryDbService {
             {
                 id: 3,
                 folderName: 'Credit Card',
-                subFolder: [
+                subFolders: [
                     {
                         name: 'Chase Freedom Card',
                         note: 'Chase',
                         dueDate: 15,
                         url: 'http://chase.com',
-                        isPayByCredit: false,
                         payments: [
                             {
                                 amount: 2845.03,
@@ -125,7 +145,14 @@ export class ExpenseDb implements InMemoryDbService {
                             }
 
                         ],
-                        effectiveDTTM: [
+                        paymentTypes: [
+                            {
+                                type: PaymentType.online,
+                                startDTTM: new Date('1/1/2016'),
+                                endDTTM: null
+                            },
+                        ],
+                        effectiveDTTMs: [
                             {
                                 issuedDTTM: new Date('5/3/2010'),
                                 expiredDTTM: new Date('7/3/2010')
