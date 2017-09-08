@@ -136,18 +136,49 @@ export class DashboardComponent implements OnInit {
 
   //ChartJs
 
+//line
+  public lineChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    backgroundColor: 'yellow',
+    borderColor:'white',
+    fill: false
+  };
+
+  public lineChartLabels: string[] = ['2009', '2010', '2011', '2012', '2013','2014','2015','2016','2017'];
+  public lineChartType: string = 'line';
+  public lineChartLegend: boolean = false;
+
+  public lineChartData: any[] = [
+    { data: [15736.24, 46103.28, 65311.89, 66901.06, 57070.77, 60700.45, 65180.22, 74576.48, 47264.65], 
+      label:'data', 
+      fill:false, 
+      
+      
+    },
+    // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+  ];
+
+  public chartColors: any[] = [
+    { 
+      borderColor:'yellow'
+    }];
+
+
+// bar 
+
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
   };
 
-  public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: string[] = ['2009', '2010', '2011', '2012', '2013','2014','2015','2016','2017'];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = true;
 
   public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+    { data: [15736.24, 46103.28, 65311.89, 66901.06, 57070.77, 60700.45, 65180.22, 74576.48, 47264.65], label: 'Year Expenses' },
+    // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
 
   // events
