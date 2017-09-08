@@ -30,8 +30,8 @@ export class DashboardComponent implements OnInit {
 
 
 
-  showThis(){
-    console.log('hh'); 
+  showThis() {
+    console.log('hh');
   }
 
 
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
   ];
 
   public gauge_ChartOptions = {
-    
+
     width: 100, height: 90,
     redFrom: 90, redTo: 100,
     yellowFrom: 75, yellowTo: 90,
@@ -130,8 +130,64 @@ export class DashboardComponent implements OnInit {
   public pie_ChartOptions = {
     title: 'My Daily Activities',
     // width: 200,
-     height: 90
+    height: 90
   };
+
+
+  //ChartJs
+
+  public barChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType: string = 'bar';
+  public barChartLegend: boolean = true;
+
+  public barChartData: any[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+  ];
+
+  // events
+  public chartClicked(e: any): void {
+    console.log(e);
+  }
+
+  public chartHovered(e: any): void {
+    console.log(e);
+  }
+
+
+
+
+  // Doughnut
+  public doughnutChartLabels: string[] = ['Housing', 'Credit Card', 'Utility'];
+  public doughnutChartData: number[] = [350, 450, 100];
+  public doughnutChartType: string = 'doughnut';
+  public doughnutOptions: any = {
+    
+    scaleShowVerticalLines: false,
+    responsive: true,
+    maintainAspectRatio: false,
+    legend:
+            {
+
+              labels:   {
+                          fontColor: 'white',
+                          fontSize: 16,
+                        },
+
+              position: 'right'
+
+            }
+
+
+  };
+
+
+
 
 
 }

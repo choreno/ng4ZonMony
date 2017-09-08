@@ -7,13 +7,15 @@ import { HttpModule } from '@angular/http';
 
 import { ExpenseService } from './service/expense.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
     SharedModule,
-    InMemoryWebApiModule.forRoot(ExpenseDb)
+    InMemoryWebApiModule.forRoot(ExpenseDb),
+    ChartsModule
   ],
   declarations: [
     DashboardComponent

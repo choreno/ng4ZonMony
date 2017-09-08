@@ -1,21 +1,27 @@
 
 <div class="row mt-5">
 
-  <div class="col-xl">
+  <div class="col-xl-4">
 
     <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
       <div class="card-header" style="font-size:20px">UnP
       </div>
       <div class="card-body">
-        <div style="font-size:60px" class="pull-right">
+        <!-- <div style="font-size:60px" class="pull-right">
           3
+        </div> -->
+        <div style="display: block;">
+          <canvas  baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"  [options]="doughnutOptions"  ></canvas>
         </div>
+
       </div>
     </div>
 
 
   </div>
-  <div class="col-xl-6 ">
+
+  <div class="col-xl-4 ">
 
     <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
       <div class="card-header" style="font-size:20px">Comparison
@@ -40,13 +46,13 @@
 
 
   </div>
-  <div class="col-xl ">
+  <div class="col-xl-4 ">
 
-        <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+        <div class="card text-white bg-dark mb-3 border border-warning" style="Width: 100%">
       <div class="card-header" style="font-size:20px">Total
       </div>
-      <div class="card-body">
-        <div>
+      <div class="card-body" >
+        <!-- <div>
           Last Month: 3000.00
         </div>
         <div>
@@ -54,7 +60,13 @@
         </div>
         <div>
           Grand Totals: 503,230.00
+        </div> -->
+        <div style="display: block  ">
+          <canvas  baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
         </div>
+
       </div>
     </div>
 
