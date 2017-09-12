@@ -114,7 +114,7 @@ export class DashboardComponent implements OnInit {
       // },
       ticks: {
         display: true,
-        fontSize: 12,
+        fontSize: 10,
         //backdropColor: 'red',
         stepSize: 2000,
         beginAtZero: false,
@@ -122,7 +122,7 @@ export class DashboardComponent implements OnInit {
         // max: 5
       },
       pointLabels: {
-        fontSize: 18,
+        fontSize: 16,
         //fontColor: 'green'
       },
     },
