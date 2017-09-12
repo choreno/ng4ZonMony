@@ -1,10 +1,9 @@
-
 <div class="row mt-5">
 
-  <div class="col-xl-4">
+  <div class="col-xl-8">
 
-    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">UnP
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">By Year
       </div>
       <div class="card-body">
         <!-- <div style="font-size:60px" class="pull-right">
@@ -14,73 +13,40 @@
           <canvas  baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"  [options]="doughnutOptions"  ></canvas>
         </div> -->
-        <div style="display: block  ">
-          <canvas  baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
-            [colors]="chartColors" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        <div style="display: block ">
+          <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
           </canvas>
+          <!-- <canvas  baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+          [colors]="chartColors" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        </canvas> -->
         </div>
-
-
-
       </div>
     </div>
-
-
   </div>
 
-  <div class="col-xl-4 ">
 
-    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">Comparison
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">By Folder
       </div>
       <div class="card-body">
-        <div class="row">
-          <div class="col-md-2">
-            <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
-          </div>
-          <div class="col-md-5">
-            <div id="pie_chartfx" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
 
-          </div>
-          <div class="col-md-5">
-            <div id="line_chartx" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  <div class="col-xl-4 ">
-
-        <div class="card text-white bg-dark mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">Total
-      </div>
-      <div class="card-body" >
-        <!-- <div>
-          Last Month: 3000.00
-        </div>
-        <div>
-          Current Month: 1000.00
-        </div>
-        <div>
-          Grand Totals: 503,230.00
+        <!-- <div style="display: block  ">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
         </div> -->
         <div style="display: block  ">
-          <canvas  baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
-            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions"  [legend]="radarChartLegend"
+            [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
           </canvas>
         </div>
 
       </div>
     </div>
-
-
-
   </div>
-  
+
 </div>
 
 
@@ -663,3 +629,31 @@
 
 
 </div>
+
+
+
+
+
+<!-- <div class="col-xl-4 ">
+
+    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Comparison
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
+          </div>
+          <div class="col-md-5">
+            <div id="pie_chartfx" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+          </div>
+          <div class="col-md-5">
+            <div id="line_chartx" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> 
+  </div> -->

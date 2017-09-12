@@ -35,7 +35,104 @@ export class DashboardComponent implements OnInit {
   }
 
 
+  //ChartJs
 
+  //line
+  public lineChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    maintainAspectRatio: false
+
+  };
+
+  public lineChartLabels: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  public lineChartType: string = 'line';
+  public lineChartLegend: boolean = true;
+
+  public lineChartData: any[] = [
+    {
+      data: [6184.19, 5041.66, 4835.30, 4638.93, 7055.07, 4705.52, 5358.42, 7059.41, 5052.10, 4758.28, 5319.89, 5171.45],
+      label: '2015',
+    },
+    {
+      data: [3428.81, 7696.98, 5375.20, 5392.01, 7599.96, 8293.00, 4700.97, 7574.79, 6343.58, 6302.96, 5054.39, 6813.83],
+      label: '2016',
+    },
+    {
+      data: [5884.31, 5272.14, 5576.19, 4919.60, 5791.30, 4733.40, 8598.63, 4783.06, 1706.02, 0.00, 0.00, 0.00],
+      label: '2017',
+    },
+  ];
+
+  public chartColors: any[] = [
+    {
+      borderColor: 'yellow'
+    }];
+
+
+
+  //radar
+
+  public radarChartLabels: string[] = ['Housing', 'Credit Card', 'Utility', 'Tax', 'Car', 'Medical', 'etc'];
+  public radarChartType: string = 'radar';
+  public radarChartLegend: boolean = true;
+  public radarChartData: any[] = [
+    {
+      data: [6184.19, 5041.66, 4835.30, 4638.93, 7055.07, 4705.52, 1000],
+      label: '2015',
+
+    },
+    {
+      data: [3428.81, 7696.98, 5375.20, 5392.01, 7599.96, 8293.00, 1200],
+      label: '2016',
+
+    },
+    {
+      data: [5884.31, 5272.14, 5576.19, 4919.60, 5791.30, 4733.40, 5000],
+      label: '2017',
+
+    },
+  ];
+
+  public radarChartOptions: any = {
+    scaleShowVerticalLines: true,
+    responsive: true,
+    maintainAspectRatio: false,
+    elements: {
+      point: {
+        radius: 5
+      }
+    },
+    scale: {
+      //reverse: false,
+      // angleLines:
+      // {
+      //   lineWidth: 10
+      // },
+      // gridLines: {
+      //   color: ['orange']
+      // },
+      ticks: {
+        display: true,
+        fontSize: 12,
+        //backdropColor: 'red',
+        stepSize: 2000,
+        beginAtZero: false,
+        // min: 1,
+        // max: 5
+      },
+      pointLabels: {
+        fontSize: 18,
+        //fontColor: 'green'
+      },
+    },
+  };
+
+
+
+
+
+  //google chart
   public gauge_ChartData = [
     ['Label', 'Value'],
     ['$$$', 120],
@@ -133,46 +230,14 @@ export class DashboardComponent implements OnInit {
     height: 90
   };
 
-
-  //ChartJs
-
-//line
-  public lineChartOptions: any = {
-    scaleShowVerticalLines: false,
-    responsive: true,
-    backgroundColor: 'yellow',
-    borderColor:'white',
-    fill: false
-  };
-
-  public lineChartLabels: string[] = ['2009', '2010', '2011', '2012', '2013','2014','2015','2016','2017'];
-  public lineChartType: string = 'line';
-  public lineChartLegend: boolean = false;
-
-  public lineChartData: any[] = [
-    { data: [15736.24, 46103.28, 65311.89, 66901.06, 57070.77, 60700.45, 65180.22, 74576.48, 47264.65], 
-      label:'data', 
-      fill:false, 
-      
-      
-    },
-    // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
-  ];
-
-  public chartColors: any[] = [
-    { 
-      borderColor:'yellow'
-    }];
-
-
-// bar 
+  // bar 
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
   };
 
-  public barChartLabels: string[] = ['2009', '2010', '2011', '2012', '2013','2014','2015','2016','2017'];
+  public barChartLabels: string[] = ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = true;
 
@@ -198,21 +263,21 @@ export class DashboardComponent implements OnInit {
   public doughnutChartData: number[] = [350, 450, 100];
   public doughnutChartType: string = 'doughnut';
   public doughnutOptions: any = {
-    
+
     scaleShowVerticalLines: false,
     responsive: true,
     maintainAspectRatio: false,
     legend:
-            {
+    {
 
-              labels:   {
-                          fontColor: 'white',
-                          fontSize: 16,
-                        },
+      labels: {
+        fontColor: 'white',
+        fontSize: 16,
+      },
 
-              position: 'right'
+      position: 'right'
 
-            }
+    }
 
 
   };
