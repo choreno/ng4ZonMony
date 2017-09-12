@@ -1,9 +1,49 @@
 <div class="row mt-5">
 
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Payments Status
+      </div>
+      <div class="card-body">
+        <div style="font-size:60px" class="pull-right">
+          3 / 15
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Balance @ Sep.
+      </div>
+      <div class="card-body">
+        <div style="font-size:60px" class="pull-right">
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Since 2009
+      </div>
+      <div class="card-body">
+        <div style="font-size:60px" class="pull-right">
+          500,000
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="row mt-5">
+
   <div class="col-xl-8">
 
     <div class="card mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">By Year
+      <div class="card-header" style="font-size:20px">Analysis By Year
       </div>
       <div class="card-body">
         <!-- <div style="font-size:60px" class="pull-right">
@@ -28,7 +68,7 @@
 
   <div class="col-xl-4">
     <div class="card mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">By Folder
+      <div class="card-header" style="font-size:20px">Analysis By Folder
       </div>
       <div class="card-body">
 
@@ -38,7 +78,7 @@
           </canvas>
         </div> -->
         <div style="display: block  ">
-          <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions"  [legend]="radarChartLegend"
+          <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions" [legend]="radarChartLegend"
             [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
           </canvas>
         </div>
