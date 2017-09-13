@@ -97,12 +97,12 @@ export class DashboardComponent implements OnInit {
   public radarChartOptions: any = {
     scaleShowVerticalLines: true,
     responsive: true,
-    maintainAspectRatio: false,
-    elements: {
-      point: {
-        radius: 5
-      }
-    },
+    // maintainAspectRatio: false,
+    // elements: {
+    //   point: {
+    //     radius: 5
+    //   }
+    // }, 
     scale: {
       //reverse: false,
       // angleLines:
