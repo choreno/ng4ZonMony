@@ -1,0 +1,742 @@
+<div class="row mt-2">
+
+  <div class="col-xl-3">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Payments
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fa fa-folder-open-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+          </div>
+          <div class="col-md">
+            <p class="pull-right" style="font-size:60px">3/15 </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-5">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Balances
+      </div>
+      <div class="card-body">
+        <div class="row" >
+          <div class="col-md-2">
+            <i class="fa fa-calendar-check-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+          </div>
+          <div class="col-md">
+            <div class="row" style="font-size:20px">
+              <div class="col-md-7">
+                <p class="pull-right">Last month:</p>
+              </div>
+              <div class="col-md">
+                <p class="pull-right">47,000.45 </p>
+              </div>
+            </div>
+            <div class="row" style="font-size:30px">
+              <div class="col-md-7" >
+                  <p class="pull-right">This month:</p>
+              </div>
+              <div class="col-md">
+                <p class="pull-right" style="color:red">47,264.65 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Since
+      </div>
+      <div class="card-body">
+          <div class="row">
+              <div class="col-md-2">
+                <i class="fa fa-usd fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+              </div>
+              <div class="col-md">
+                <p class="pull-right" style="font-size:60px">514,581.28 </p>
+              </div>
+            </div>
+    
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row mt-5">
+
+  <div class="col-xl-8">
+
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Analysis By Year
+      </div>
+      <div class="card-body">
+        <!-- <div style="font-size:60px" class="pull-right">
+          3
+        </div> -->
+        <!-- <div style="display: block;">
+          <canvas  baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"  [options]="doughnutOptions"  ></canvas>
+        </div> -->
+        <div style="display: block ">
+          <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+          <!-- <canvas  baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+          [colors]="chartColors" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        </canvas> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Analysis By Folder
+      </div>
+      <div class="card-body">
+
+        <!-- <div style="display: block  ">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        </div> -->
+        <div style="display: block  ">
+          <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions" [legend]="radarChartLegend"
+            [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row mt-5">
+  <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+    <div class="card-header">Housing
+      <button type="button" class="btn btn-default btn-circle  pull-right"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+    <div class="card-body">
+
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <!-- Card 1 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-success">
+              <div class="card-header" style="font-weight:bold;font-size:20px">
+                HOA
+              </div>
+              <div class="card-body">
+                <div class="card-text">Homeowener's Association, XXXXX</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">30th</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$1500.09</span> @2/5/2017 &nbsp;&nbsp;
+                        <span><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: N/A
+                        <!-- <input type="text" id="money" class="form-control" style="Width:70%;text-align:left"> -->
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-danger">
+              <div class="card-header">
+                Mortgage
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">WellsFargo,~2040 yrs</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">1st</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017 &nbsp;
+                        <span><i class="fa fa-money fa-2x" aria-hidden="true"></i></span>
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: This is a test note, #34567-1324-5
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="card-footer">
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Line Chart</div>
+              <div class="card-body">
+                <div id="line_chartf" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+
+                <div id="pie_chartf2" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+                <div id="pie_chartf3" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- 2nd -->
+
+<div class="row mt-3">
+  <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+    <div class="card-header">Utility
+      <button type="button" class="btn btn-default btn-circle  pull-right"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+    <div class="card-body">
+
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <!-- Card 1 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-success">
+              <div class="card-header">
+                GRU
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">Homeowener's Association, XXXXX</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">30th</label>
+                    </div>
+                    <label class="control-label">Payments: &nbsp;<span><i class="fa fa-credit-card fa-2x" aria-hidden="true"></i></span></label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$1500.09</span> @2/5/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: N/A
+                        <!-- <input type="text" id="money" class="form-control" style="Width:70%;text-align:left"> -->
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-danger">
+              <div class="card-header">
+                Verizon
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">WellsFargo,~2040 yrs</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">1st</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: This is a test note, #34567-1324-5
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="card-footer">
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Line Chart</div>
+              <div class="card-body">
+                <div id="line_chartut" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+
+                <div id="pie_chartfut" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+                <div id="pie_chartfut2" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- 3rd -->
+
+<div class="row mt-5">
+  <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+    <div class="card-header">Credit Card
+      <button type="button" class="btn btn-default btn-circle  pull-right"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+    <div class="card-body">
+
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <!-- Card 1 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-success">
+              <div class="card-header">
+                Chase
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">Homeowener's Association, XXXXX</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">30th</label>
+                    </div>
+                    <label class="control-label">Payments: &nbsp;<span><i class="fa fa-credit-card fa-2x" aria-hidden="true"></i></span></label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$1500.09</span> @2/5/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: N/A
+                        <!-- <input type="text" id="money" class="form-control" style="Width:70%;text-align:left"> -->
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-danger">
+              <div class="card-header">
+                American Express
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">WellsFargo,~2040 yrs</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">1st</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: This is a test note, #34567-1324-5
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-danger">
+              <div class="card-header">
+                Bank of America
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">WellsFargo,~2040 yrs</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">1st</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: This is a test note, #34567-1324-5
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark border border-danger">
+              <div class="card-header">
+                TD Bank
+              </div>
+              <div class="card-body">
+                <div class="card-text" style="font-size:20px">WellsFargo,~2040 yrs</div>
+                <br/>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-inline">
+                      <label class="control-label">Due:&nbsp;</label>
+                      <label class="control-label">1st</label>
+                    </div>
+                    <label class="control-label">Payments: </label>
+
+                    <ul>
+                      <li>Last Payment:&nbsp;&nbsp;<span style="color:red;font-size:24px">$200.09</span> @2/1/2017
+                        <!-- <input type="text" id="money" class="form-control" placeholder="$" value="$1500.09" style="Width:25%;text-align:right" disabled> -->
+                      </li>
+                      <li> Current Balance:
+                        <div class="form-inline">
+                          <input type="text" id="money" class="form-control" placeholder="$" value="1600.99" style="Width:40%;text-align:right;font-size:30px">
+
+                          <a class="btn btn-danger ml-4">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                          </a>
+
+                          <a class="btn btn-primary ml-2" href="http://google.com" target="_blank" aria-label="Skip to main navigation">
+                            <i class="fa fa-chrome" aria-hidden="true"></i> 
+                          </a>
+
+                          <a class="btn btn-primary ml-2">
+                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                          </a>
+                          <a class="btn btn-primary ml-2"> 
+                            <i class="fa fa-database fa-lg"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>Note: This is a test note, #34567-1324-5
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="card-footer">
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-content-around">
+
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Line Chart</div>
+              <div class="card-body">
+                <div id="line_chartcd" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+
+                <div id="pie_chartfcd" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card text-white bg-dark border border-info">
+              <div class="card-header">Pie Chart</div>
+              <div class="card-body">
+                <div id="pie_chartfcd2" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- <div class="col-xl-4 ">
+
+    <div class="card text-white bg-dark  mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Comparison
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <div id="gauge_chart" [chartData]="gauge_ChartData" [chartOptions]="gauge_ChartOptions" chartType="Gauge" GoogleChart></div>
+          </div>
+          <div class="col-md-5">
+            <div id="pie_chartfx" [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" GoogleChart></div>
+
+          </div>
+          <div class="col-md-5">
+            <div id="line_chartx" [chartData]="line_ChartData" [chartOptions]="line_ChartOptions" chartType="LineChart" GoogleChart></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> 
+  </div> -->
