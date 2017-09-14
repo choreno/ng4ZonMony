@@ -2,16 +2,17 @@
 
 
   <div class="col-xl-3">
-    <div class="card mb-3 border border-warning" style="Width: 100%">
+    <div class="card mb-3 border border-warning" style="Width: 100%;">
       <div class="card-header" style="font-size:20px">Today
       </div>
-      <div class="card-body">
+      <div class="card-body" style="height:140px">
         <div class="row">
           <div class="col-md-4">
-            <i class="fa fa-folder-open-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+            <i class="fa fa-clock-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
           </div>
-          <div class="col-md">
-            <p class="pull-right" style="font-size:60px">3/15 </p>
+          <div class="col-md mr-3">
+            <div class="row pull-right" style="font-size:35px">{{now|date}}</div>
+            <div class="row pull-right" style="font-size:30px">{{now|date:"EEE"}}, {{now| date:"H:mm:ss"}} </div>
           </div>
         </div>
 
@@ -21,15 +22,15 @@
 
   <div class="col-xl-3">
     <div class="card mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">Payments
+      <div class="card-header" style="font-size:20px">Unpaid
       </div>
-      <div class="card-body">
+      <div class="card-body" style="height:140px">
         <div class="row">
-          <div class="col-md-4">
-            <i class="fa fa-folder-open-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+          <div class="col-md-4" >
+            <i class="fa fa-folder-open-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-45%) "></i>
           </div>
           <div class="col-md">
-            <p class="pull-right" style="font-size:60px">3/15 </p>
+            <p class="pull-right" style="font-size:50px">3/15 </p>
           </div>
         </div>
 
@@ -37,14 +38,14 @@
     </div>
   </div>
 
-  <div class="col-xl-5">
+  <div class="col-xl-6">
     <div class="card mb-3 border border-warning" style="Width: 100%">
-      <div class="card-header" style="font-size:20px">Balances
+      <div class="card-header" style="font-size:20px">Balances <span style="font-size:16px">since $514,581.28 </span> 
       </div>
-      <div class="card-body">
-        <div class="row" >
+      <div class="card-body" style="height:140px">
+        <div class="row">
           <div class="col-md-2">
-            <i class="fa fa-calendar-check-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+            <i class="fa fa-calendar-check-o fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-60%);"></i>
           </div>
           <div class="col-md">
             <div class="row" style="font-size:20px">
@@ -56,8 +57,8 @@
               </div>
             </div>
             <div class="row" style="font-size:30px">
-              <div class="col-md-7" >
-                  <p class="pull-right">This month:</p>
+              <div class="col-md-7">
+                <p class="pull-right">This month:</p>
               </div>
               <div class="col-md">
                 <p class="pull-right" style="color:red">47,264.65 </p>
@@ -68,63 +69,62 @@
       </div>
     </div>
   </div>
-
+<!-- 
   <div class="col-xl-4">
     <div class="card mb-3 border border-warning" style="Width: 100%">
       <div class="card-header" style="font-size:20px">Since
       </div>
-      <div class="card-body">
-          <div class="row">
-              <div class="col-md-2">
-                <i class="fa fa-usd fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
-              </div>
-              <div class="col-md">
-                <p class="pull-right" style="font-size:60px">514,581.28 </p>
-              </div>
-            </div>
-    
+      <div class="card-body" style="height:140px">
+        <div class="row">
+          <div class="col-md-2">
+            <i class="fa fa-usd fa-5x" style="position:relative;top:50%;left:50%; transform:translate(-50%,-50%) "></i>
+          </div>
+          <div class="col-md">
+            <p class="pull-right" style="font-size:60px">514,581.28 </p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
 
 <div class="row mt-3">
-  
-    <div class="col-xl-8">
-  
-      <div class="card mb-3 border border-warning" style="Width: 100%">
-        <div class="card-header" style="font-size:20px">Analysis By Year
-        </div>
-        <div class="card-body">
 
-          <div style="display: block ">
-            <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-              [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
-            </canvas>
+  <div class="col-xl-8">
 
-          </div>
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Analysis By Year
+      </div>
+      <div class="card-body">
+
+        <div style="display: block ">
+          <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+
         </div>
       </div>
     </div>
-  
-  
-    <div class="col-xl-4">
-      <div class="card mb-3 border border-warning" style="Width: 100%">
-        <div class="card-header" style="font-size:20px">Analysis By Folder
-        </div>
-        <div class="card-body">
-  
-          <div style="display: block  ">
-            <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions" [legend]="radarChartLegend"
-              [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
-            </canvas>
-          </div>
-  
-        </div>
-      </div>
-    </div>
-  
   </div>
-  
+
+
+  <div class="col-xl-4">
+    <div class="card mb-3 border border-warning" style="Width: 100%">
+      <div class="card-header" style="font-size:20px">Analysis By Folder
+      </div>
+      <div class="card-body">
+
+        <div style="display: block  ">
+          <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions" [legend]="radarChartLegend"
+            [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

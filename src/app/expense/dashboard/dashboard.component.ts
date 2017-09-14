@@ -11,10 +11,19 @@ import { ExpenseService } from '../service/expense.service';
 })
 export class DashboardComponent implements OnInit {
 
+  private now: Date;
 
   expenses: IExpense[];
 
-  constructor(private _expenseService: ExpenseService) { }
+  constructor(private _expenseService: ExpenseService) {
+
+    this.now = new Date();
+    
+    setInterval(() => {
+      this.now = new Date();
+    }, 1000);
+
+  }
 
 
   ngOnInit() {
