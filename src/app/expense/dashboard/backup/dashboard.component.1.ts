@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IExpense } from "../inteface/expense";
-import { ExpenseService } from '../service/expense.service';
+import { IExpense } from "../../inteface/expense";
+import { ExpenseService } from '../../service/expense.service';
 
 
 
